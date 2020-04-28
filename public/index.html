@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //let formData = new FormData();
+      //formData.append('title', 'Lugar creado con AJAX');
+      fetch('http://localhost:3000/places',{
+        method: 'GET',
+        //method: 'POST',
+        //body:formData,
+        headers:{
+          'application': 'UOzxuq98xoHBawybnkNO'
+          //'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNjgzMzZjNzAyNmMwMzE3OGE2N2ViMSIsImlhdCI6MTU2NzExMDE2M30.nVuVw0iM-465s7g8ytqmfNwMJb9I6UKk4sR6zMEG3vQ'
+        }
+      }).then(response=>{
+        response.json().then(console.log)
+      });
+    </script>
+  </body>
+</html>
